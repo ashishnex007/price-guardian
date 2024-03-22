@@ -12,10 +12,12 @@ type Props = {
 }
 
 const ProductDetails = async({ params: { id }}: Props) => {
+    // @ts-ignore
     const product = await getProductById(id);
 
     if(!product) redirect('/');
 
+// @ts-ignore
     const getSimilarProducts = await similarProducts(id);
 
 
@@ -133,6 +135,7 @@ const ProductDetails = async({ params: { id }}: Props) => {
                 </div>
             </div>
             <Modal 
+            // @ts-ignore
                 productId = {id}
             />
         </div>

@@ -41,6 +41,7 @@ export async function scrapeAmazonProduct(url : string){
         $('#imgBlkFront').attr('data-a-dynamic-image') || 
         $('#landingImage').attr('data-a-dynamic-image') ||
         {} ;
+        // @ts-ignore
         const imageUrls = Object.keys(JSON.parse(images));
         const discount = $('.savingsPercentage').text().replace(/[-%]/g,"");
         const featureBullets = $('#featurebullets_feature_div');
